@@ -1,11 +1,16 @@
 .hero {
   height: 270px;
   display: flex;
+  background-color: var(--color-black);
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+.context {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
-  background-color: var(--color-black);
 }
 div h1 {
   font-weight: 600;
