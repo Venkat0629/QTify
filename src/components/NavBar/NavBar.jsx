@@ -8,8 +8,14 @@ import QtifyLogo from "../../assets/Qtify.svg";
 export default function NavBar() {
   return (
     <div className={styles.navbar}>
-      <Logo props={QtifyLogo} />
-      <Search placeholder="Search a album of your choice" />
+      <a href="/">
+        <Logo props={QtifyLogo} />
+      </a>
+
+      <Search
+        placeholder="Search a album of your choice"
+        searchData={searchData}
+      />
       <Button>Give Feedback</Button>
     </div>
   );
