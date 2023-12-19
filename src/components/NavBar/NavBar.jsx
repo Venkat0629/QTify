@@ -11,7 +11,6 @@ export default function NavBar({ searchData }) {
       <a href="/">
         <Logo props={QtifyLogo} />
       </a>
-
       <Search
         placeholder="Search a album of your choice"
         searchData={searchData}
