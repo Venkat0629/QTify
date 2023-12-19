@@ -5,13 +5,12 @@ import Logo from "./Logo/Logo";
 import styles from "./NavBar.module.css";
 import QtifyLogo from "../../assets/Qtify.svg";
 
-export default function NavBar() {
+export default function NavBar({ searchData }) {
   return (
     <div className={styles.navbar}>
       <a href="/">
         <Logo props={QtifyLogo} />
       </a>
-
       <Search
         placeholder="Search a album of your choice"
         searchData={searchData}
