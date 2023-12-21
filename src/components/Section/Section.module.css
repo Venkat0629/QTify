@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.header h3,
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.cardWrapper {
+  margin-top: 18px;
+}
+.wrapper {
+  display: flex;
+  row-gap: 24px;
+  column-gap: 40px;
+  flex-wrap: wrap;
+}
+.toggle {
+  cursor: pointer;
+  color: var(--color-primary);
+}

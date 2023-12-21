@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Hero.module.css";
+import HeadSet from "../../assets/HeadSet.svg";
 
-export default function Hero({ props }) {
+export default function Hero({}) {
   return (
     <div className={styles.hero}>
       <div className={styles.context}>
@@ -10,7 +11,7 @@ export default function Hero({ props }) {
           <h1>Over thousands podcast episodes</h1>
         </div>
         <div>
-          <img src={props} alt="HeadSet" />
+          <img src={HeadSet} alt="HeadSet" />
         </div>
       </div>
     </div>

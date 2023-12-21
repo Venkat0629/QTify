@@ -4,13 +4,14 @@ import Search from "./Search/Search";
 import Logo from "./Logo/Logo";
 import styles from "./NavBar.module.css";
 import QtifyLogo from "../../assets/Qtify.svg";
+import { Link } from "react-router-dom";
 
 export default function NavBar({ searchData }) {
   return (
     <div className={styles.navbar}>
-      <a href="/">
+      <Link to="/">
         <Logo props={QtifyLogo} />
-      </a>
+      </Link>
       <Search
         placeholder="Search a album of your choice"
         searchData={searchData}
