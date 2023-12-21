@@ -13,6 +13,7 @@ export default function Home({}) {
       <Hero />
       <div className={styles.wrapper}>
         <Section title="Top Albums" data={topAlbums} type="album" />
+        <hr className={styles.separator} />
         <Section title="New Albums" data={newAlbums} type="album" />
         {/* <Section title="Songs" data={songs} type="song" /> */}
       </div>
