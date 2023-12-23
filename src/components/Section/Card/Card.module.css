@@ -1,11 +1,12 @@
 .wrapper {
-  width: 159px;
+  width: 160px;
   height: 232px;
   display: flex;
   flex-direction: column;
   color: var(--color-white);
   background-color: var(--color-black);
   gap: 6px;
+  text-decoration: none;
 }
 .card {
   width: 100%;
@@ -34,7 +35,6 @@
   margin-left: 8px;
   background-color: var(--color-black);
   color: var(--color-white);
-  text-decoration: none;
 }
 
 .title {
@@ -44,9 +44,13 @@
   text-overflow: ellipsis;
 }
 
-.linkStyle {
+/* .linkStyle {
   text-decoration: none;
+  margin: 0px;
 }
 .linkStyle :hover {
+  color: var(--color-primary);
+} */
+.wrapper :hover {
   color: var(--color-primary);
 }

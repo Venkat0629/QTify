@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 :root {
   --color-primary: #34c94b;
   --color-black: #121212;
@@ -50,4 +50,7 @@ h6 {
 #root,
 #_next {
   isolation: isolate;
+}
+.swiper-slide {
+  width: auto !important;
 }

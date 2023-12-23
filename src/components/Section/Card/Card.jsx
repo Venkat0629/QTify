@@ -11,22 +11,23 @@ export default function Card({ cardData, type }) {
       case "album": {
         return (
           <Tooltip title={`${songs.length} songs`} placement="top" arrow>
-            <Link to={`/album/${slug}`} className={styles.linkStyle}>
-              <div className={styles.wrapper}>
-                <div className={styles.card}>
-                  <div>
-                    <img src={image} alt="song card" loading="lazy"></img>
-                  </div>
-                  <Chip
-                    className={styles.chip}
-                    label={`${follows} Follows`}
-                    size="small"
-                  />
-                </div>
+            <Link to={`/album/${slug}`} className={styles.wrapper}>
+              {/* <Link to={`/album/${slug}`} className={styles.linkStyle}> */}
+              {/* <div className={styles.wrapper}> */}
+              <div className={styles.card}>
                 <div>
-                  <p className={styles.title}>{title}</p>
+                  <img src={image} alt="song card" loading="lazy"></img>
                 </div>
+                <Chip
+                  className={styles.chip}
+                  label={`${follows} Follows`}
+                  size="small"
+                />
               </div>
+              <div>
+                <p className={styles.title}>{title}</p>
+              </div>
+              {/* </div> */}
             </Link>
           </Tooltip>
         );

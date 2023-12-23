@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "./Section.module.css";
 import { CircularProgress } from "@mui/material";
 import Card from "./Card/Card";
+import Carousel from "./Carousel/Carousel";
+
 export default function Section({ title, data, type }) {
   const [collapse, setCollapse] = useState(true);
   const handleCollapse = () => {
@@ -25,7 +27,11 @@ export default function Section({ title, data, type }) {
                 <Card key={item.id} cardData={item} type={type} />
               ))}
             </div>
-          ) : null}
+          ) : (
+            <div className={styles.wrapper}>
+              <Carousel data={data} type={type} className={styles.carousel} />
+            </div>
+          )}
         </div>
       )}
     </div>
