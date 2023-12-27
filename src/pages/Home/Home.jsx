@@ -4,18 +4,24 @@ import { useOutletContext } from "react-router-dom";
 import Hero from "../../components/HeroSection/Hero";
 import Section from "../../components/Section/Section";
 
-export default function Home({}) {
+export default function Home() {
   const { data } = useOutletContext();
-  const { topAlbums, newAlbums, songs } = data;
+  const { topAlbums, newAlbums, songs, genres } = data;
 
   return (
     <>
       <Hero />
       <div className={styles.wrapper}>
         <Section title="Top Albums" data={topAlbums} type="album" />
-        <hr className={styles.separator} />
         <Section title="New Albums" data={newAlbums} type="album" />
-        {/* <Section title="Songs" data={songs} type="song" /> */}
+        <hr className={styles.separator} />
+        <Section
+          title="Songs"
+          data={songs}
+          type="song"
+          filters={[{ key: "all", label: "All" }, ...genres]}
+        />
+        <hr className={styles.separator} />
       </div>
     </>
   );

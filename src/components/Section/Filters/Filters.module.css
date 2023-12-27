@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+}
+
+.wrapper .label {
+  color: var(--color-white);
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.selected {
+  color: var(--color-primary) !important;
+}

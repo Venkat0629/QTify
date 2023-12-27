@@ -27,8 +27,8 @@ export default function Carousel({ data, type }) {
       <Controls data={data} />
       <SlideArrow type={"left"} />
       {data.map((item) => (
-        <SwiperSlide>
-          <Card key={item.id} cardData={item} type={type} />
+        <SwiperSlide key={item.id}>
+          <Card cardData={item} type={type} />
         </SwiperSlide>
       ))}
       <SlideArrow type={"right"} />

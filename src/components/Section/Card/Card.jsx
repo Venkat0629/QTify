@@ -11,7 +11,7 @@ export default function Card({ cardData, type }) {
       case "album": {
         return (
           <Tooltip title={`${songs.length} songs`} placement="top" arrow>
-            <Link to={`/album/${slug}`} className={styles.wrapper}>
+            <Link to={`/album/:${slug}`} className={styles.wrapper}>
               {/* <Link to={`/album/${slug}`} className={styles.linkStyle}> */}
               {/* <div className={styles.wrapper}> */}
               <div className={styles.card}>
