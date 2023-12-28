@@ -52,7 +52,7 @@ export default function Section({ title, data, type, filters }) {
                   <Card key={item.id} cardData={item} type={type} />
                 ))}
               </div>
-              <hr className={styles.separator} />
+              {title === "Top Albums" && <hr className={styles.separator} />}
             </>
           ) : (
             <div className={styles.wrapper}>

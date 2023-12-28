@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import { useOutletContext } from "react-router-dom";
 import Hero from "../../components/HeroSection/Hero";
 import Section from "../../components/Section/Section";
+import Footer from "../../components/Footer/Footer";
 
 export default function Home() {
   const { data } = useOutletContext();
@@ -22,6 +23,9 @@ export default function Home() {
           filters={[{ key: "all", label: "All" }, ...genres]}
         />
         <hr className={styles.separator} />
+        <div className={styles.footer}>
+          <Footer />
+        </div>
       </div>
     </>
   );
