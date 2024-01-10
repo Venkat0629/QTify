@@ -5,7 +5,7 @@ import SentimentDissatisfiedIcon from "@mui/icons-material/SentimentDissatisfied
 
 const Album = ({ album }) => {
   return (
-    <Link to="/" className={styles.album}>
+    <Link to={`/album/:${album.slug}`} className={styles.album}>
       <div className={styles.icon}>
         <img src={album.image} alt={album.title} />
       </div>

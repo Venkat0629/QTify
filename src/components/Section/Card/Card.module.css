@@ -45,6 +45,7 @@
   text-overflow: ellipsis;
 }
 
-.wrapper :hover {
+.wrapper:hover {
   color: var(--color-primary);
+  opacity: 50%;
 }
