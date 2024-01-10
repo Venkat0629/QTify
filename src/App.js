@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import { Outlet } from "react-router-dom";
 import { fetchData } from "./api/api";
+import SearchAlbums from "./components/NavBar/SearchAlbums/SearchAlbums";
 
 // https://qtify-backend-labs.crio.do/albums/top
 // https://qtify-backend-labs.crio.do/albums/new
@@ -44,7 +45,14 @@ function App() {
 
   return (
     <>
-      <NavBar searchData={[...topAlbums, ...newAlbums]} />
+      <NavBar searchData={searchData} setSearchData={setSearchData} />
+      {searchData && (
+        <SearchAlbums
+          Albums={[...topAlbums, ...newAlbums].filter((album) =>
+            album.title.toLowerCase().includes(searchData.toLowerCase())
+          )}
+        />
+      )}
       <Outlet
         context={{ data: { topAlbums, newAlbums, songs, genres, faq } }}
       />

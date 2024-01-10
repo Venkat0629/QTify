@@ -6,7 +6,7 @@ import styles from "./NavBar.module.css";
 import QtifyLogo from "../../assets/Qtify.svg";
 import { Link } from "react-router-dom";
 
-export default function NavBar({ searchData }) {
+export default function NavBar({ searchData, setSearchData }) {
   return (
     <div className={styles.navbar}>
       <Link to="/">
@@ -15,6 +15,7 @@ export default function NavBar({ searchData }) {
       <Search
         placeholder="Search a album of your choice"
         searchData={searchData}
+        setSearchData={setSearchData}
       />
       <Button>Give Feedback</Button>
     </div>

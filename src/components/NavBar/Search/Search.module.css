@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   height: 48px;
-  width: 50%;
+  width: 50vw;
+  margin-left: 12.5vw !important;
 }
 .search {
   height: 100%;
