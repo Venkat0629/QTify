@@ -2,7 +2,12 @@ import React from "react";
 import styles from "./Search.module.css";
 import { ReactComponent as SearchIcon } from "../../../assets/SearchIcon.svg";
 
-export default function Search({ placeholder, searchData, setSearchData }) {
+export default function Search({
+  placeholder,
+  searchData,
+  setSearchData,
+  setVisible,
+}) {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -12,7 +17,10 @@ export default function Search({ placeholder, searchData, setSearchData }) {
       <input
         className={styles.search}
         placeholder={placeholder}
-        onChange={(e) => setSearchData(e.target.value)}
+        onChange={(e) => {
+          setVisible(true);
+          setSearchData(e.target.value);
+        }}
         value={searchData}
         required
       />

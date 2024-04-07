@@ -15,6 +15,7 @@ import SearchAlbums from "./components/NavBar/SearchAlbums/SearchAlbums";
 function App() {
   const [searchData, setSearchData] = useState();
   const [data, setData] = useState({});
+  const [visible, setVisible] = useState(true);
 
   const generateData = (key, source) => {
     source().then((result) => {
@@ -45,12 +46,17 @@ function App() {
 
   return (
     <>
-      <NavBar searchData={searchData} setSearchData={setSearchData} />
-      {searchData && (
+      <NavBar
+        searchData={searchData}
+        setSearchData={setSearchData}
+        setVisible={setVisible}
+      />
+      {searchData && visible && (
         <SearchAlbums
           Albums={[...topAlbums, ...newAlbums].filter((album) =>
             album.title.toLowerCase().includes(searchData.toLowerCase())
           )}
+          setVisible={setVisible}
         />
       )}
       <Outlet

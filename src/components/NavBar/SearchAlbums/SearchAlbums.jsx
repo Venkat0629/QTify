@@ -3,9 +3,13 @@ import styles from "./SearchAlbums.module.css";
 import { Link } from "react-router-dom";
 import SentimentDissatisfiedIcon from "@mui/icons-material/SentimentDissatisfied";
 
-const Album = ({ album }) => {
+const Album = ({ album, setVisible }) => {
   return (
-    <Link to={`/album/:${album.slug}`} className={styles.album}>
+    <Link
+      to={`/album/:${album.slug}`}
+      className={styles.album}
+      onClick={() => setVisible(false)}
+    >
       <div className={styles.icon}>
         <img src={album.image} alt={album.title} />
       </div>
@@ -20,11 +24,13 @@ const Album = ({ album }) => {
   );
 };
 
-export default function SearchAlbums({ Albums }) {
+export default function SearchAlbums({ Albums, setVisible }) {
   return (
     <div className={styles.wrapper}>
       {Albums.length > 0 ? (
-        Albums.map((album) => <Album key={album.id} album={album} />)
+        Albums.map((album) => (
+          <Album key={album.id} album={album} setVisible={setVisible} />
+        ))
       ) : (
         <div className={styles.dissatisfiedwrapper}>
           <p>No Albums found...</p>
