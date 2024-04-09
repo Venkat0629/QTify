@@ -1,11 +1,13 @@
-.wrapper {
-}
 .headerwrapper {
-  height: 461px;
   display: flex;
-  gap: 30px;
+  gap: 50px;
   align-items: center;
-  padding: 3%;
+  padding: 3% 5%;
+}
+.albumcontentwrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 .albumimage {
   max-width: 288px;
@@ -13,4 +15,77 @@
   border-radius: 20px;
   border: 12px;
   object-fit: cover;
+}
+.buttonwrapper {
+  display: flex;
+  gap: 25px;
+}
+.albumdetails {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.albumbutton {
+  display: flex;
+  gap: 10px;
+  padding: 6px 15px;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-black);
+  border-radius: 10px;
+  font-weight: 600;
+}
+.albumbutton:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+.albumbutton:hover svg path {
+  fill: var(--color-white);
+}
+.contentwrapper {
+  padding: 0px 5%;
+}
+.songswrapper {
+}
+.titlewrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+}
+.pagination {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  height: 40px;
+}
+.pageButton {
+  background-color: transparent;
+  border: none;
+  color: var(--color-white);
+  font-size: small;
+}
+.pageButton:hover {
+  width: 25px;
+  height: 25px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.title {
+  min-width: 15vw;
+}
+.artists{
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.duration {
+  min-width: 10vw;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
 }
