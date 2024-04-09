@@ -105,7 +105,7 @@ export default function Album() {
           <div className={styles.artists}>Artists</div>
           <div className={styles.duration}>Duration</div>
         </div>
-        <div className={styles.songswrapper}>
+        <div>
           {currentSongs.map((song, index) => (
             <Song key={song.id} song={song} />
           ))}
