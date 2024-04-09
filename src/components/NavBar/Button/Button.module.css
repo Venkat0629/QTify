@@ -8,3 +8,6 @@
   font-weight: 600;
   font-size: 1.25vw;
 }
+.button:hover {
+  color: var(--color-white);
+}

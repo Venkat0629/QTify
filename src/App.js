@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar/NavBar";
 import { Outlet } from "react-router-dom";
 import { fetchData } from "./api/api";
 import SearchAlbums from "./components/NavBar/SearchAlbums/SearchAlbums";
+import FeedBack from "./components/NavBar/FeedBack/FeedBack";
 
 // https://qtify-backend-labs.crio.do/albums/top
 // https://qtify-backend-labs.crio.do/albums/new
@@ -16,6 +17,7 @@ function App() {
   const [searchData, setSearchData] = useState();
   const [data, setData] = useState({});
   const [visible, setVisible] = useState(true);
+  const [feedBack, setFeedBack] = useState(false);
 
   const generateData = (key, source) => {
     source().then((result) => {
@@ -50,6 +52,7 @@ function App() {
         searchData={searchData}
         setSearchData={setSearchData}
         setVisible={setVisible}
+        setFeedBack={setFeedBack}
       />
       {searchData && visible && (
         <SearchAlbums
@@ -59,6 +62,7 @@ function App() {
           setVisible={setVisible}
         />
       )}
+      {feedBack && <FeedBack setFeedBack={setFeedBack} />}
       <Outlet
         context={{ data: { topAlbums, newAlbums, songs, genres, faq } }}
       />

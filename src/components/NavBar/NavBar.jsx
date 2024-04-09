@@ -6,7 +6,12 @@ import styles from "./NavBar.module.css";
 import QtifyLogo from "../../assets/Qtify.svg";
 import { Link } from "react-router-dom";
 
-export default function NavBar({ searchData, setSearchData, setVisible }) {
+export default function NavBar({
+  searchData,
+  setSearchData,
+  setVisible,
+  setFeedBack,
+}) {
   return (
     <div className={styles.navbar}>
       <Link to="/">
@@ -18,7 +23,7 @@ export default function NavBar({ searchData, setSearchData, setVisible }) {
         setSearchData={setSearchData}
         setVisible={setVisible}
       />
-      <Button>Give Feedback</Button>
+      <Button setFeedBack={setFeedBack}>Give Feedback</Button>
     </div>
   );
 }
