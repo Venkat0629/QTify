@@ -4,10 +4,16 @@
   font-size: small;
   margin: 2vh 0;
 }
+.songwrapper:hover {
+  border-radius: 5px;
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+}
 .songIcon {
   min-width: 60px;
   height: 65px;
   border-radius: 5px;
+  object-fit: cover;
 }
 .imagewrapper {
   display: flex;
